@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = OrderService.Contracts
+build_property.ProjectDir = /Users/ivan/Projects/Different/MassTransitGettingStarted/OrderService.Contracts/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

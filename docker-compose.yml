@@ -1,0 +1,26 @@
+# to start execute:
+#   docker-compose up --detach --build
+# to stop execute:
+#   docker-compose down
+
+services:
+    
+    rabbitmq:
+        image: masstransit/rabbitmq
+        ports:
+            - "15672:15672"
+            - "5672:5672"
+    
+    order:
+        build:
+            context: .
+            dockerfile: OrderService/order.dockerfile
+        depends_on:
+            - rabbitmq
+    
+    payment:
+        build:
+            context: .
+            dockerfile: PaymentService/payment.dockerfile
+        depends_on:
+            - rabbitmq
